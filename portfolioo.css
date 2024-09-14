@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Roboto", system-ui;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none !important;
+}
+body{
+    background-color: #faf9f6;
+    transition: .7s;
+}
+.menulist{
+    display: inline-block;
+    width: 100px;
+    height: 190px;
+    position: absolute;
+    top: 70px;
+    right: 150px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    padding-top: 20px;
+    line-height: 40px;
+}
+
+
+
+#menu{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    #q{
+        display: none;
+    }
+    #menu{
+        display: inline;
+    }
+    
+    body::before {
+        content: "This website is only accessible on laptops or desktops.";
+        text-align: center;
+        color: red;
+        height: 100vh;
+        background-color: #030303;
+        position: absolute;
+        width: 100%;
+    }
+    .about-section, .image-section, .ccontainer, nav{
+        display: none;
+    }
+    
+   
+  }
+
+
+span{
+    color: rgb(255, 230, 0);
+    font-size: 60px;
+}
+nav{
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    
+}
+.navbar{
+    margin: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0px 20px;
+    margin-top: 10px;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    
+}
+.navlink a{
+    margin: 0px 20px;
+    color: black;
+    padding: 5px;
+    transition: .5s;
+}
+.navlink a:hover{
+    color: yellow;
+}
+.darkmode{
+    background-color: black;
+    color: white;
+    transition: .7s
+
+}
+.darkmode .navbar{
+    border-color: white;
+
+}
+.darkmode .navlink a{
+    color: white;
+}
+.darkmode button{
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+.darkmode button:hover{
+    color: black;
+    border-color: white;
+}
+.darkmode .form-card{
+    background-color: rgb(19, 19, 19);
+}
+
+.home-section{
+    height: 100vh;
+    width: 100%;
+    
+    
+}
+.home-container{
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-image: url(/home.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.home-container h1, .home-container p, .button-home{
+    margin-left: 100px
+}
+.darkmode .home-container{
+    
+    background-image: url(/baagg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.bothome{
+    z-index: -1;
+}
+.button-home{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+button{
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 14px;
+}
+#button-aboutus{
+    border: 1px solid black;
+    background-color: transparent;
+    transition: .6s;
+}
+.darkmode #button-aboutus {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    transition: .6s;
+}
+#button-aboutus:hover{
+    border: 1px solid black;
+    background-color: yellow;
+}
+#button-haha:hover{
+    border: 1px solid black;
+    background-color: transparent;
+    transition: .6s;
+}
+#button-haha{
+    border: 1px solid black;
+    background-color: yellow;
+}
+.darkmode #button-haha{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: yellow;
+    color: rgb(0, 0, 0);
+}
+.darkmode #button-haha:hover{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+.about-section{
+    height: 100vh;
+    width: 100%;
+}
+.about-container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 50% 50%;
+
+}
+.top{
+    display: grid;
+    grid-template-rows: 50% 1fr;
+    
+    width: 100%;
+    
+    height: 100%;
+}
+.toptop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px ;
+    margin-right: 100px;
+    text-align: center;
+}
+.topbot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px ;
+    margin-right: 100px;
+    text-align: center;
+}
+.bot{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100%;
+
+}
+.left{
+    height: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.right{
+    height: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.image-section{
+    height: 100vh;
+    width: 100%;
+}
+.image-container{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+.darkmode .image-container img{
+    height: 250px;
+    width: 250px;
+    transition: .3s;
+    border-radius: 20px;
+    border: #faf9f6 1px solid;
+    
+}
+.image-container img{
+    height: 250px;
+    width: 250px;
+    transition: .3s;
+    border-radius: 20px;
+    border: #030303 1px solid;
+    
+}
+.image-container img:hover{
+    opacity: .50;
+}
+.home-container img{
+    opacity: .70;
+}
+.topimage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 10px;
+}
+.botimage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 10px;
+}
+.darkmode body{
+    background-color: black;
+    color: white;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+input[type=submit] {
+   background-color: #04AA6D;
+   color: white;
+   padding: 12px 20px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+  
+input[type=submit]:hover {
+   background-color: #45a049;
+}
+ 
+.ccontainer {
+   border-radius: 5px;
+   background-color: #f2f2f2;
+   padding: 20px;
+   width: 50%;
+   
+}
+.darkmode .ccontainer {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 50%;
+    color: black;
+    
+ }
+.cccontainer{
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
